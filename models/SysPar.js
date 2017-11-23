@@ -3,7 +3,8 @@ module.exports = {
   //mongoose schema, see mongoosejs.com for more info
   schema: {
     key: {type: String, index: true, unique: true},
-    val: String
+    val: String,
+    createDt: {type: Date, default: Date.now}
   }
 
 }
