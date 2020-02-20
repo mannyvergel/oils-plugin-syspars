@@ -1,6 +1,6 @@
 {
   "name": "oils-plugin-syspars",
-  "version": "3.1.2",
+  "version": "5.0.0",
   "description": "Persistent system parameters (key-value pair) plugin for oils js.",
   "keywords": [
   	"oils",

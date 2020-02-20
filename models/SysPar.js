@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   name: 'SysPar',
   //mongoose schema, see mongoosejs.com for more info

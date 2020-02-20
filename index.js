@@ -1,3 +1,4 @@
+'use strict';
 
 module.exports = function basicPlugin(pluginConf, web, next) {
   pluginConf = web.utils.extend(require('./conf.js'), pluginConf);
@@ -17,6 +18,24 @@ module.exports = function basicPlugin(pluginConf, web, next) {
         }
 
         resolve(syspar);
+      })  
+    });
+    
+  }
+
+  web.syspars.getValue = function(key, cb) {
+    return new Promise(function(resolve, reject) {
+      SysPar.findOne({key: key}, function(err, syspar) {
+        if (cb) {
+          cb(err, syspar);
+        }
+        
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        resolve(syspar && syspar.val);
       })  
     });
     
